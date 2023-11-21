@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjSoundBetterApi", "prjSoundBetterApi.csproj", "{032B7CEF-380E-4A83-8EC2-E210824746CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{032B7CEF-380E-4A83-8EC2-E210824746CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032B7CEF-380E-4A83-8EC2-E210824746CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032B7CEF-380E-4A83-8EC2-E210824746CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032B7CEF-380E-4A83-8EC2-E210824746CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AF08650-1EF9-4297-9BC5-BB1BA14A53A3}
+	EndGlobalSection
+EndGlobal
