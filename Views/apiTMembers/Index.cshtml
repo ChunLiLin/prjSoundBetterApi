@@ -149,6 +149,17 @@
 
             </div>
         </div>
+       
     </section>
-
+    <button id="buttonCors" class="btn btn-danger">cors</button>
 </main><!-- End #main -->
+
+@section Scripts{
+    <script>
+        $('#buttonCors').click(function () {
+            $.getJSON('@Url.Content("/apiTMembers/Indexjson")', (datas) => {
+                console.log(datas);//
+            })
+        })
+    </script>
+}

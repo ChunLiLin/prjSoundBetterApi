@@ -24,6 +24,11 @@ namespace prjSoundBetterApi.Controllers
             var dbSoundBetterContext = _context.TMembers.Include(t => t.FPermission);
             return View(await dbSoundBetterContext.ToListAsync());
         }
+        public IActionResult Indexjson()
+        {
+            var dbSoundBetterContext = _context.TMembers;
+            return Json(dbSoundBetterContext);
+        }
 
         // GET: apiTMembers/Details/5
         public async Task<IActionResult> Details(int? id)
