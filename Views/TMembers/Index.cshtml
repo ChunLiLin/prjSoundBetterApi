@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-@*<table class="table">
+<table class="table">
     <thead>
         <tr>
             <th>
@@ -92,73 +92,13 @@
         </tr>
 }
     </tbody>
-</table>*@
-
-<main id="main" class="main">
-
-    <div class="pagetitle">
-        <h1>Data Tables</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item">Tables</li>
-                <li class="breadcrumb-item active">Data</li>
-            </ol>
-        </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section">
-        <div class="row">
-            <div class="col-lg-12">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Datatables</h5>
-                        <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable. Check for <a href="https://fiduswriter.github.io/simple-datatables/demos/" target="_blank">more examples</a>.</p>
-
-                        <!-- Table with stripped rows -->
-                        <table class="table datatable">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <b>N</b>ame
-                                    </th>
-                                    <th>Phone.</th>
-                                    <th>Password</th>
-                                    <th data-type="date" data-format="YYYY/DD/MM">BirthDate</th>
-                                    <th>Email</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
-                                <tr>
-                                    <td>@Html.DisplayFor(modelItem => item.FName)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.FPhone)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.FPasswod)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.FBirthday)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.FEmail)</td>
-                                </tr>
-                                }
-                            </tbody>
-                        </table>
-                        <!-- End Table with stripped rows -->
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-       
-    </section>
-    <button id="buttonCors" class="btn btn-danger">cors</button>
-</main><!-- End #main -->
-
+</table>
+<button id="buttonCors">Cors</button>
 @section Scripts{
     <script>
         $('#buttonCors').click(function () {
-            $.getJSON('@Url.Content("/apiTMembers/Indexjson")', (datas) => {
-                console.log(datas);//
+            $.getJSON('/apiTMembers/List', (datas) => {
+                console.log(datas[0]);//
             })
         })
     </script>
