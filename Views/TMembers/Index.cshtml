@@ -97,8 +97,8 @@
 @section Scripts{
     <script>
         $('#buttonCors').click(function () {
-            $.getJSON('/apiTMembers/List', (datas) => {
-                console.log(datas[0]);//
+            $.getJSON('/apiTMembers/QueryById/1', (datas) => {
+                console.log(datas);//
             })
         })
     </script>

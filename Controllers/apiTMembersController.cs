@@ -26,15 +26,13 @@ namespace prjSoundBetterApi.Controllers
         }
         //===搜尋===
         public IActionResult QueryById(int? id)
-        {
+        {          
             if (id == null || _context.TMembers == null)
             {
                 return NotFound();
             }
 
-            var tMember = _context.TMembers
-                .Include(t => t.FPermission)
-                .FirstOrDefaultAsync(m => m.FMemberId == id);
+            var tMember = _context.TMembers.Where((m => m.FMemberId == id)).FirstOrDefault();
             if (tMember == null)
             {
                 return NotFound();
@@ -55,18 +53,13 @@ namespace prjSoundBetterApi.Controllers
         //===修改===
         public IActionResult Edit(int id,TMember tMember)
         {
-            if (id != tMember.FMemberId)
-            {
-                return NotFound();
-            }
-
             if (tMember != null)
             {
                 try
                 {
                     _context.Update(tMember);
                     _context.SaveChanges();
-                    return Content("新增成功");
+                    return Content("修改成功");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -87,7 +80,7 @@ namespace prjSoundBetterApi.Controllers
         {
             if (_context.TMembers == null)
             {
-                return Problem("Entity set 'dbSoundBetterContext.TMembers'  is null.");
+                return Problem("連線錯誤");
             }
             var tMember = _context.TMembers.Where(c => c.FMemberId == id).FirstOrDefault();
             if (tMember != null)
