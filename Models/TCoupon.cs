@@ -26,4 +26,6 @@ public partial class TCoupon
     public virtual ICollection<TDealProject> TDealProjects { get; set; } = new List<TDealProject>();
 
     public virtual ICollection<TDealSiteLoan> TDealSiteLoans { get; set; } = new List<TDealSiteLoan>();
+
+    public virtual ICollection<TMemberCoupon> TMemberCoupons { get; set; } = new List<TMemberCoupon>();
 }
