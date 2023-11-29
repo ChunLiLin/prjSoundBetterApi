@@ -20,7 +20,7 @@ namespace prjSoundBetterApi.Controllers
         //===List_All===
         public IActionResult List()
         {
-            var dbSoundBetterContext = _context.TProjects;
+            var dbSoundBetterContext = _context.TStyles;
             return Json(dbSoundBetterContext);
         }
     }

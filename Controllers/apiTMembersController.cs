@@ -99,7 +99,7 @@ namespace prjSoundBetterApi.Controllers
                 string feedback = "OK";
                 foreach (var item in _context.TMembers)
                 {
-                    if (item.FUserame == username)
+                    if (item.FUsername == username)
                     {
                         feedback = "已存在的使用者名稱";
                     }
@@ -115,7 +115,7 @@ namespace prjSoundBetterApi.Controllers
                 string feedback = "OK";
                 foreach (var item in _context.TMembers)
                 {
-                    if (item.FUserame == email)
+                    if (item.FUsername == email)
                     {
                         feedback = "電子郵件已被註冊";
                     }
